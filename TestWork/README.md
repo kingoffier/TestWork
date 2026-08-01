@@ -205,5 +205,3 @@ docker compose -f TestWork.API/docker-compose.yml down
 $env:MSSQL_SA_PASSWORD = "New_Strong_Password123!"
 docker compose -f TestWork.API/docker-compose.yml up --build -d
 ```
-
-SMTP-параметры передаются через секцию `environment` сервиса `api` в `docker-compose.yml`. Пароли не следует хранить в репозитории.
