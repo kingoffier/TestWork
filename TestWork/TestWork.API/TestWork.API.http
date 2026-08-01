@@ -1,0 +1,30 @@
+@TestWork_HostAddress = http://localhost:5101
+
+POST {{TestWork_HostAddress}}/api/subscription/createSubscription
+Content-Type: application/json
+
+{
+  "apartmentUrl": "https://prinzip.su/flats/park_kultury/66676/",
+  "email": "test@example.com"
+}
+
+###
+
+GET {{TestWork_HostAddress}}/api/subscription/getAllSubscriptions
+Accept: application/json
+
+###
+
+GET {{TestWork_HostAddress}}/api/subscription/getAllSubscriptions?refresh=true
+Accept: application/json
+
+###
+
+PATCH {{TestWork_HostAddress}}/api/subscription/updatePrice/1
+Content-Type: application/json
+
+{
+  "price": 1
+}
+
+###
